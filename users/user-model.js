@@ -8,14 +8,13 @@ module.exports = {
 };
 
 function find() {
-    return db("users").select("id", "username").orderBy("id");
+    return db("users")
 }
 
 function findBy(filter) {
-    return db("users as u")
-        .join("roles as r", "r.id", "u.role")
+    return db("users as u")       
         .where(filter)
-        .select("u.id", "u.username", "u.password", "r.name as role")
+        .select("u.id", "u.username", "u.password")
         .orderBy("u.id");
 }
 
