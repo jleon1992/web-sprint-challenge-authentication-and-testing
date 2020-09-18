@@ -3,7 +3,7 @@
 
 const router = require("express").Router();
 
-const Users = require("../users/users-model.js");
+const Users = require("../users/user-model");
 const { isValid } = require("../users/users-service.js");
 const constants = require("../config/constants.js");
 
