@@ -13,7 +13,7 @@ server.use(cors());
 server.use(express.json());
 
 server.get('/', (req, res) => {
-    res.json({api: 'up and running'})
+    res.status(200).json({api: 'up and running'})
 })
 server.use('/api/auth', authRouter);
 server.use('/api/jokes', authenticate, jokesRouter);

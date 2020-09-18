@@ -54,6 +54,10 @@ describe('GET /', () => {
         const res = request(server).get('/')
         expect(res).toBeDefined()
     })
+    it('should return a JSON object', async () => {
+        const res = await request(server).get('/')
+        expect(res.type).toMatch(/json/i)
+    })
   
 })
 
